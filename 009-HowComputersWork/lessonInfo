@@ -1,0 +1,9 @@
+This is isn't a go exercise, it's more of a computer fundamentals text
+
+
+1. computers run on electricity, this mean they can only have two discrete values: ON or OFF
+2. with these two discrete states, we can create a coding scheme that acts on whether or not a computer state is ON or OFF (logic flows). The more levers you have, the more possibilities you can configure. E.g porch light on halloween
+    1 porch light = you can only have two messages, x means something if on, or x mean something if off
+    2 porch lights = you can have up to 4 different messages
+    and so on... 2(n), straight up binary 👾
+
