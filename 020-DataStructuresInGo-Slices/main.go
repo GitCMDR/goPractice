@@ -34,5 +34,35 @@ func main() {
 	x = append(x, heyIHaveASliceNow...) // u need to use this syntax to append a slice into another slice.
 	fmt.Println(x)
 
+	// deleting from slices looks more complicated than it is in python
+
+	// Unlike other languages, Go does not provide any built-in functions to remove an element from a slice. Items need to be removed from a slice by slicing them out.
+
+	// x is [11 22 33 44 55 66 77 88 99 88 77]
+
+	// say i want to remove 55 from the array, i'd do
+	x = append(x[:4], x[5:]...)
+	fmt.Println(x)
+
+	// x is now [11 22 33 44 66 77 88 99 88 77]
+
+	// slices are built on top of arrays, changing slices make the compiler build a new array and drop the old one, this is another operation. if you know the specific size of your slice, and you know that it won't be changed, you could use the make builtin function to spare the compiler from running extra operations
+
+	y := make([]int, 10, 100) // make a slice of composite literal type []int, choose a length (the number of stored values after being initialized) and then choose a capacity (The capacity of a slice is the number of elements it can hold.)
+
+	fmt.Println(y, len(y), cap(y))
+	// prints [0 0 0 0 0 0 0 0 0 0] 10 100
+	// capacity doesnt mean number of indexes
+	// for an index to be accessible, you'll first have to create it via append
+	// once capacity is reached, the compiler will throw out the first underlying array and create a new one, doubled in size
+
+	// you can also do multidimensional slices in go
+	// you can see this by using the [][]type
+
+	headers := []string{"locale","body_1","body_2"}
+	indexes := []string{"en","hello","world"}
+
+	df := [][]string{headers, indexes}
+	fmt.Println(df)
 
 }
