@@ -26,4 +26,17 @@ func main() {
 	} else {
 		fmt.Println("value doesn't exist")
 	}
+
+
+	// you can iterate on maps
+
+	for k, v := range m { // range m will return a key and a value in every iteration of the map
+		fmt.Println(k, v)
+	}
+
+	// its very easy to delete keys from maps
+
+	delete(m, "en") // deletion in maps happens in place
+
+	fmt.Println(m)
 }

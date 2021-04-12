@@ -65,4 +65,10 @@ func main() {
 	df := [][]string{headers, indexes}
 	fmt.Println(df)
 
+	// lastly you can also iterate on slices
+
+	for i, v := range headers {
+		fmt.Println(i, v)
+	}
+
 }
