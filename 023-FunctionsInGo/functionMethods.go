@@ -2,10 +2,6 @@ package main
 
 import "fmt"
 
-type person struct {
-	first string
-	last string
-}
 
 type secretAgent struct {
 	person
@@ -21,6 +17,7 @@ type secretAgent struct {
 func (s secretAgent) speak(st string)  {
 	fmt.Println(st)
 }
+
 
 func main() {
 	sa1 := secretAgent{

@@ -41,8 +41,6 @@ func main()  {
 	myFoobarsum = foobar()
 	fmt.Println(myFoobarsum)
 
-
-
 }
 
 func foo() {
