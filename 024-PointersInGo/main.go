@@ -27,3 +27,6 @@ func foo (y *int) {
 	fmt.Println(*y)
 
 }
+
+
+/// L6!lol120
