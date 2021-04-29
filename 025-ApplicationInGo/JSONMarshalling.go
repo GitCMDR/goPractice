@@ -17,7 +17,7 @@ func main()  {
 		last:  "B",
 		age:   27,
 	}
-	p2 := person{ // create random struct 1
+	p2 := person{ // create random struct 2
 		First: "D",
 		last:  "S",
 		age:   21,
